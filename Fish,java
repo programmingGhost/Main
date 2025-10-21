@@ -1,0 +1,72 @@
+/*
+ * Να υλοποιηθεί η κλάση Fish (ψάρι) η οποία υλοποιεί προγραμματιστικά ένα ψάρι.
+ * Η κλάση Fish περιέχει τα χαρακτηριστικά:
+ * 
+ * Τype (τύπος ψαριού π.χ. Ροφός, Τόνος, Καρχαρίας κ.λπ.), Weight (βάρος με
+ * τιμές στο διάστημα [0.1, 50.0]), Difficulty (βαθμός δυσκολίας ψαρέματος με
+ * τιμές στο διάστημα [0.5, 5.5]) και τις μεθόδους:
+ * 
+ * - public double getTotalPoints(): που επιστρέφει το βάρος επί (x) τον
+ *   βαθμό δυσκολίας του ψαριού και
+ * 
+ * - public void print(): που εκτυπώνει στην οθόνη όλα τα χαρακτηριστικά του
+ * ψαριού.
+ */
+
+public class Fish {
+
+    private String type;
+    private double weight;
+    private double difficulty;
+
+    // consrtactors
+    public Fish() {
+
+    }
+
+    public Fish(String type, double weight, double difficulty) {
+        this.type = type;
+        this.weight = weight;
+        this.difficulty = difficulty;
+
+    }
+
+    // Getters and Setter
+
+    // Getters
+    public String getType() {
+        return type;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public double getDifficulty() {
+        return difficulty;
+    }
+
+    // Setters
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public void setDifficulty(double difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    // Methods
+    public double getTotalPoints() {
+        weight = weight * difficulty;
+        return weight;
+    }
+
+    public void print() {
+        System.out.println("Type: " + getType() + " Weight: " + getWeight() + " Difficulty: " + getDifficulty()
+                + " Total points: " + getTotalPoints());
+    }
+}
